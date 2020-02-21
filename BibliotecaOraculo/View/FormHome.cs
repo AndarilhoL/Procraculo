@@ -47,5 +47,10 @@ namespace BibliotecaOraculo
         {
             Close();
         }
+
+        private void buttonHome_Click(object sender, EventArgs e)
+        {
+            buttonHome.BackColor = Color.FromArgb(99,110,114);
+        }
     }
 }
