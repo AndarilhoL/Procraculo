@@ -43,14 +43,25 @@ namespace BibliotecaOraculo
             mouseDown = false;
         }
 
+
+//EVENTOS BOTÕES
         private void buttonSair_Click(object sender, EventArgs e)
         {
             Close();
+        }
+        private void buttonMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
             buttonHome.BackColor = Color.FromArgb(99,110,114);
+        }
+
+        private void buttonBancoDados_Click(object sender, EventArgs e)
+        {
+            Conexao.TestarConexao();
         }
     }
 }
