@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\Conexao.cs" />
+    <Compile Include="Model\Generos.cs" />
     <Compile Include="View\FormHome.cs">
       <SubType>Form</SubType>
     </Compile>
