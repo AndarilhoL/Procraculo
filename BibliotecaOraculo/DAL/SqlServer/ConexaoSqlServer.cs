@@ -8,6 +8,7 @@ namespace BibliotecaOraculo
         public ConexaoSqlServer(string stringConexao)
         {
             connection = new SqlConnection(stringConexao);
+
         }
     }
 }
