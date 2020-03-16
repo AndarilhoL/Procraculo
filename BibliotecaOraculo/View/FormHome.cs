@@ -61,7 +61,7 @@ namespace BibliotecaOraculo
 
         private void buttonBancoDados_Click(object sender, EventArgs e)
         {
-            Conexao.TestarConexao();
+            
         }
     }
 }
