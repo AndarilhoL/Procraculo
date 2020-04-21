@@ -5,7 +5,7 @@ namespace BibliotecaOraculo.Entidades
 {
     public abstract class ConexaoAbstract
     {
-        public static DbConnection connection;
+        public DbConnection connection;
 
         public void AbrirConexao()
         {
@@ -42,7 +42,9 @@ namespace BibliotecaOraculo.Entidades
                 bool isAberta = false;
 
                 if (connection.State == System.Data.ConnectionState.Closed)
-                {                    
+                {
+
+                    connection.Open();
                     isAberta = true;
                 }
 

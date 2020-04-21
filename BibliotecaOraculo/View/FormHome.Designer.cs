@@ -31,17 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHome));
             this.panelSuperior = new System.Windows.Forms.Panel();
-            this.panelBotoes = new System.Windows.Forms.Panel();
-            this.pictureBox_IconHome = new System.Windows.Forms.PictureBox();
+            this.buttonMinimizar = new System.Windows.Forms.Button();
             this.buttonSair = new System.Windows.Forms.Button();
+            this.panelBotoes = new System.Windows.Forms.Panel();
+            this.buttonBancoDados = new System.Windows.Forms.Button();
+            this.pictureBox_IconHome = new System.Windows.Forms.PictureBox();
             this.buttonHome = new System.Windows.Forms.Button();
             this.buttonListas = new System.Windows.Forms.Button();
             this.buttonCadastrar = new System.Windows.Forms.Button();
             this.toolTipBarraSuperior = new System.Windows.Forms.ToolTip(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonBancoDados = new System.Windows.Forms.Button();
-            this.buttonMinimizar = new System.Windows.Forms.Button();
+            this.panelPrincipal = new System.Windows.Forms.Panel();
             this.panelSuperior.SuspendLayout();
             this.panelBotoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_IconHome)).BeginInit();
@@ -61,29 +61,17 @@
             this.panelSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelSuperior_MouseMove);
             this.panelSuperior.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelSuperior_MouseUp);
             // 
-            // panelBotoes
+            // buttonMinimizar
             // 
-            this.panelBotoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(190)))), ((int)(((byte)(195)))));
-            this.panelBotoes.Controls.Add(this.buttonBancoDados);
-            this.panelBotoes.Controls.Add(this.pictureBox_IconHome);
-            this.panelBotoes.Controls.Add(this.buttonHome);
-            this.panelBotoes.Controls.Add(this.buttonListas);
-            this.panelBotoes.Controls.Add(this.buttonCadastrar);
-            this.panelBotoes.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelBotoes.Location = new System.Drawing.Point(0, 18);
-            this.panelBotoes.Name = "panelBotoes";
-            this.panelBotoes.Size = new System.Drawing.Size(197, 583);
-            this.panelBotoes.TabIndex = 1;
-            // 
-            // pictureBox_IconHome
-            // 
-            this.pictureBox_IconHome.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_IconHome.Image")));
-            this.pictureBox_IconHome.Location = new System.Drawing.Point(24, 6);
-            this.pictureBox_IconHome.Name = "pictureBox_IconHome";
-            this.pictureBox_IconHome.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox_IconHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_IconHome.TabIndex = 4;
-            this.pictureBox_IconHome.TabStop = false;
+            this.buttonMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonMinimizar.BackgroundImage")));
+            this.buttonMinimizar.FlatAppearance.BorderSize = 0;
+            this.buttonMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMinimizar.Location = new System.Drawing.Point(962, 0);
+            this.buttonMinimizar.Name = "buttonMinimizar";
+            this.buttonMinimizar.Size = new System.Drawing.Size(16, 16);
+            this.buttonMinimizar.TabIndex = 0;
+            this.buttonMinimizar.UseVisualStyleBackColor = true;
+            this.buttonMinimizar.Click += new System.EventHandler(this.buttonMinimizar_Click);
             // 
             // buttonSair
             // 
@@ -100,6 +88,42 @@
             this.buttonSair.TabIndex = 3;
             this.buttonSair.UseVisualStyleBackColor = false;
             this.buttonSair.Click += new System.EventHandler(this.buttonSair_Click);
+            // 
+            // panelBotoes
+            // 
+            this.panelBotoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(190)))), ((int)(((byte)(195)))));
+            this.panelBotoes.Controls.Add(this.buttonBancoDados);
+            this.panelBotoes.Controls.Add(this.pictureBox_IconHome);
+            this.panelBotoes.Controls.Add(this.buttonHome);
+            this.panelBotoes.Controls.Add(this.buttonListas);
+            this.panelBotoes.Controls.Add(this.buttonCadastrar);
+            this.panelBotoes.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelBotoes.Location = new System.Drawing.Point(0, 18);
+            this.panelBotoes.Name = "panelBotoes";
+            this.panelBotoes.Size = new System.Drawing.Size(197, 583);
+            this.panelBotoes.TabIndex = 1;
+            // 
+            // buttonBancoDados
+            // 
+            this.buttonBancoDados.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonBancoDados.BackgroundImage")));
+            this.buttonBancoDados.FlatAppearance.BorderSize = 0;
+            this.buttonBancoDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBancoDados.Location = new System.Drawing.Point(3, 556);
+            this.buttonBancoDados.Name = "buttonBancoDados";
+            this.buttonBancoDados.Size = new System.Drawing.Size(24, 24);
+            this.buttonBancoDados.TabIndex = 5;
+            this.buttonBancoDados.UseVisualStyleBackColor = true;
+            this.buttonBancoDados.Click += new System.EventHandler(this.buttonBancoDados_Click);
+            // 
+            // pictureBox_IconHome
+            // 
+            this.pictureBox_IconHome.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_IconHome.Image")));
+            this.pictureBox_IconHome.Location = new System.Drawing.Point(24, 6);
+            this.pictureBox_IconHome.Name = "pictureBox_IconHome";
+            this.pictureBox_IconHome.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox_IconHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_IconHome.TabIndex = 4;
+            this.pictureBox_IconHome.TabStop = false;
             // 
             // buttonHome
             // 
@@ -137,6 +161,7 @@
             this.buttonListas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonListas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonListas.UseVisualStyleBackColor = true;
+            this.buttonListas.Click += new System.EventHandler(this.buttonListas_Click);
             // 
             // buttonCadastrar
             // 
@@ -155,45 +180,22 @@
             this.buttonCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonCadastrar.UseVisualStyleBackColor = true;
+            this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
             // 
-            // panel1
+            // panelPrincipal
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(197, 18);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(811, 583);
-            this.panel1.TabIndex = 2;
-            // 
-            // buttonBancoDados
-            // 
-            this.buttonBancoDados.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonBancoDados.BackgroundImage")));
-            this.buttonBancoDados.FlatAppearance.BorderSize = 0;
-            this.buttonBancoDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBancoDados.Location = new System.Drawing.Point(3, 556);
-            this.buttonBancoDados.Name = "buttonBancoDados";
-            this.buttonBancoDados.Size = new System.Drawing.Size(24, 24);
-            this.buttonBancoDados.TabIndex = 5;
-            this.buttonBancoDados.UseVisualStyleBackColor = true;
-            this.buttonBancoDados.Click += new System.EventHandler(this.buttonBancoDados_Click);
-            // 
-            // buttonMinimizar
-            // 
-            this.buttonMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonMinimizar.BackgroundImage")));
-            this.buttonMinimizar.FlatAppearance.BorderSize = 0;
-            this.buttonMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMinimizar.Location = new System.Drawing.Point(962, 0);
-            this.buttonMinimizar.Name = "buttonMinimizar";
-            this.buttonMinimizar.Size = new System.Drawing.Size(16, 16);
-            this.buttonMinimizar.TabIndex = 0;
-            this.buttonMinimizar.UseVisualStyleBackColor = true;
-            this.buttonMinimizar.Click += new System.EventHandler(this.buttonMinimizar_Click);
+            this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPrincipal.Location = new System.Drawing.Point(197, 18);
+            this.panelPrincipal.Name = "panelPrincipal";
+            this.panelPrincipal.Size = new System.Drawing.Size(811, 583);
+            this.panelPrincipal.TabIndex = 2;
             // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 601);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelPrincipal);
             this.Controls.Add(this.panelBotoes);
             this.Controls.Add(this.panelSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -218,7 +220,7 @@
         private System.Windows.Forms.Button buttonCadastrar;
         private System.Windows.Forms.Button buttonHome;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelPrincipal;
         private System.Windows.Forms.PictureBox pictureBox_IconHome;
         private System.Windows.Forms.Button buttonBancoDados;
         private System.Windows.Forms.Button buttonMinimizar;

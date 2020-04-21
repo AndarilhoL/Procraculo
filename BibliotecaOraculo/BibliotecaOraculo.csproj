@@ -71,13 +71,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\GeneroDAL.cs" />
     <Compile Include="DAL\MySql\ConexaoMySql.cs" />
     <Compile Include="DAL\SqlServer\ConexaoSqlServer.cs" />
-    <Compile Include="DAL\IConexao.cs" />
     <Compile Include="Entidades\ConexaoAbstract.cs" />
-    <Compile Include="Model\Generos.cs" />
+    <Compile Include="Model\Genero.cs" />
+    <Compile Include="View\FormCadastroGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormCadastroGenero.Designer.cs">
+      <DependentUpon>FormCadastroGenero.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormConexao.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FormConexao.Designer.cs">
       <DependentUpon>FormConexao.cs</DependentUpon>
@@ -91,6 +97,15 @@
     <Compile Include="Model\Filmes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\UserControlListaGeneros.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControlListaGeneros.Designer.cs">
+      <DependentUpon>UserControlListaGeneros.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\FormCadastroGenero.resx">
+      <DependentUpon>FormCadastroGenero.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormConexao.resx">
       <DependentUpon>FormConexao.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +121,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\UserControlListaGeneros.resx">
+      <DependentUpon>UserControlListaGeneros.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

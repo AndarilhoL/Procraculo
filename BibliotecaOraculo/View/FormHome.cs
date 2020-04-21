@@ -1,19 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using BibliotecaOraculo.DAL;
+using BibliotecaOraculo.View;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BibliotecaOraculo
 {
     public partial class FormHome : Form
     {
+        public static FormConexao formConexao = new FormConexao();
+        public static FormCadastroGenero formCadastroGenero = new FormCadastroGenero();
+        public UserControlListaGeneros userControlListaGeneros = new UserControlListaGeneros();
+
         bool mouseDown;
         private Point offset;
+
         public FormHome()
         {
             InitializeComponent();
@@ -49,6 +50,7 @@ namespace BibliotecaOraculo
         {
             Close();
         }
+
         private void buttonMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -61,7 +63,20 @@ namespace BibliotecaOraculo
 
         private void buttonBancoDados_Click(object sender, EventArgs e)
         {
-            
+            formConexao.Show();
+        }
+
+        private void buttonCadastrar_Click(object sender, EventArgs e)
+        {
+            formCadastroGenero.Show();
+        }
+
+        private void buttonListas_Click(object sender, EventArgs e)
+        {
+            panelPrincipal.Controls.Add(userControlListaGeneros);
+            GeneroDAL generoDAL = new GeneroDAL();
+            var lista = generoDAL.Buscar();
+            userControlListaGeneros.dataGridViewGeneros.DataSource = lista;
         }
     }
 }
