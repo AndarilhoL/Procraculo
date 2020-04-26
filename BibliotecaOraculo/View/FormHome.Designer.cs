@@ -31,17 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHome));
             this.panelSuperior = new System.Windows.Forms.Panel();
-            this.buttonMinimizar = new System.Windows.Forms.Button();
-            this.buttonSair = new System.Windows.Forms.Button();
             this.panelBotoes = new System.Windows.Forms.Panel();
-            this.buttonBancoDados = new System.Windows.Forms.Button();
-            this.pictureBox_IconHome = new System.Windows.Forms.PictureBox();
-            this.buttonHome = new System.Windows.Forms.Button();
-            this.buttonListas = new System.Windows.Forms.Button();
-            this.buttonCadastrar = new System.Windows.Forms.Button();
             this.toolTipBarraSuperior = new System.Windows.Forms.ToolTip(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.button_BancoDados = new System.Windows.Forms.Button();
+            this.pictureBox_IconHome = new System.Windows.Forms.PictureBox();
+            this.button_Home = new System.Windows.Forms.Button();
+            this.button_Listas = new System.Windows.Forms.Button();
+            this.button_Cadastrar = new System.Windows.Forms.Button();
+            this.buttonMinimizar = new System.Windows.Forms.Button();
+            this.buttonSair = new System.Windows.Forms.Button();
             this.panelSuperior.SuspendLayout();
             this.panelBotoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_IconHome)).BeginInit();
@@ -60,6 +60,107 @@
             this.panelSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSuperior_MouseDown);
             this.panelSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelSuperior_MouseMove);
             this.panelSuperior.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelSuperior_MouseUp);
+            // 
+            // panelBotoes
+            // 
+            this.panelBotoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(190)))), ((int)(((byte)(195)))));
+            this.panelBotoes.Controls.Add(this.button_BancoDados);
+            this.panelBotoes.Controls.Add(this.pictureBox_IconHome);
+            this.panelBotoes.Controls.Add(this.button_Home);
+            this.panelBotoes.Controls.Add(this.button_Listas);
+            this.panelBotoes.Controls.Add(this.button_Cadastrar);
+            this.panelBotoes.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelBotoes.Location = new System.Drawing.Point(0, 18);
+            this.panelBotoes.Name = "panelBotoes";
+            this.panelBotoes.Size = new System.Drawing.Size(197, 583);
+            this.panelBotoes.TabIndex = 1;
+            // 
+            // panelPrincipal
+            // 
+            this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPrincipal.Location = new System.Drawing.Point(197, 18);
+            this.panelPrincipal.Name = "panelPrincipal";
+            this.panelPrincipal.Size = new System.Drawing.Size(811, 583);
+            this.panelPrincipal.TabIndex = 2;
+            // 
+            // button_BancoDados
+            // 
+            this.button_BancoDados.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_BancoDados.BackgroundImage")));
+            this.button_BancoDados.FlatAppearance.BorderSize = 0;
+            this.button_BancoDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_BancoDados.Location = new System.Drawing.Point(3, 556);
+            this.button_BancoDados.Name = "button_BancoDados";
+            this.button_BancoDados.Size = new System.Drawing.Size(24, 24);
+            this.button_BancoDados.TabIndex = 5;
+            this.button_BancoDados.UseVisualStyleBackColor = true;
+            this.button_BancoDados.Click += new System.EventHandler(this.buttonBancoDados_Click);
+            // 
+            // pictureBox_IconHome
+            // 
+            this.pictureBox_IconHome.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_IconHome.Image")));
+            this.pictureBox_IconHome.Location = new System.Drawing.Point(24, 6);
+            this.pictureBox_IconHome.Name = "pictureBox_IconHome";
+            this.pictureBox_IconHome.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox_IconHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_IconHome.TabIndex = 4;
+            this.pictureBox_IconHome.TabStop = false;
+            // 
+            // button_Home
+            // 
+            this.button_Home.FlatAppearance.BorderSize = 0;
+            this.button_Home.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
+            this.button_Home.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
+            this.button_Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Home.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Home.Image = ((System.Drawing.Image)(resources.GetObject("button_Home.Image")));
+            this.button_Home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Home.Location = new System.Drawing.Point(0, 203);
+            this.button_Home.Name = "button_Home";
+            this.button_Home.Size = new System.Drawing.Size(197, 51);
+            this.button_Home.TabIndex = 0;
+            this.button_Home.Text = "Home";
+            this.button_Home.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_Home.UseVisualStyleBackColor = true;
+            this.button_Home.Click += new System.EventHandler(this.buttonHome_Click);
+            // 
+            // button_Listas
+            // 
+            this.button_Listas.FlatAppearance.BorderSize = 0;
+            this.button_Listas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
+            this.button_Listas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button_Listas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Listas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Listas.Image = ((System.Drawing.Image)(resources.GetObject("button_Listas.Image")));
+            this.button_Listas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Listas.Location = new System.Drawing.Point(0, 352);
+            this.button_Listas.Name = "button_Listas";
+            this.button_Listas.Size = new System.Drawing.Size(197, 51);
+            this.button_Listas.TabIndex = 2;
+            this.button_Listas.Text = "Listas";
+            this.button_Listas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Listas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_Listas.UseVisualStyleBackColor = true;
+            this.button_Listas.Click += new System.EventHandler(this.buttonListas_Click);
+            // 
+            // button_Cadastrar
+            // 
+            this.button_Cadastrar.FlatAppearance.BorderSize = 0;
+            this.button_Cadastrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
+            this.button_Cadastrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button_Cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Cadastrar.Image = ((System.Drawing.Image)(resources.GetObject("button_Cadastrar.Image")));
+            this.button_Cadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Cadastrar.Location = new System.Drawing.Point(0, 276);
+            this.button_Cadastrar.Name = "button_Cadastrar";
+            this.button_Cadastrar.Size = new System.Drawing.Size(197, 51);
+            this.button_Cadastrar.TabIndex = 1;
+            this.button_Cadastrar.Text = "Cadastrar";
+            this.button_Cadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Cadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_Cadastrar.UseVisualStyleBackColor = true;
+            this.button_Cadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
             // 
             // buttonMinimizar
             // 
@@ -89,107 +190,6 @@
             this.buttonSair.UseVisualStyleBackColor = false;
             this.buttonSair.Click += new System.EventHandler(this.buttonSair_Click);
             // 
-            // panelBotoes
-            // 
-            this.panelBotoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(190)))), ((int)(((byte)(195)))));
-            this.panelBotoes.Controls.Add(this.buttonBancoDados);
-            this.panelBotoes.Controls.Add(this.pictureBox_IconHome);
-            this.panelBotoes.Controls.Add(this.buttonHome);
-            this.panelBotoes.Controls.Add(this.buttonListas);
-            this.panelBotoes.Controls.Add(this.buttonCadastrar);
-            this.panelBotoes.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelBotoes.Location = new System.Drawing.Point(0, 18);
-            this.panelBotoes.Name = "panelBotoes";
-            this.panelBotoes.Size = new System.Drawing.Size(197, 583);
-            this.panelBotoes.TabIndex = 1;
-            // 
-            // buttonBancoDados
-            // 
-            this.buttonBancoDados.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonBancoDados.BackgroundImage")));
-            this.buttonBancoDados.FlatAppearance.BorderSize = 0;
-            this.buttonBancoDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBancoDados.Location = new System.Drawing.Point(3, 556);
-            this.buttonBancoDados.Name = "buttonBancoDados";
-            this.buttonBancoDados.Size = new System.Drawing.Size(24, 24);
-            this.buttonBancoDados.TabIndex = 5;
-            this.buttonBancoDados.UseVisualStyleBackColor = true;
-            this.buttonBancoDados.Click += new System.EventHandler(this.buttonBancoDados_Click);
-            // 
-            // pictureBox_IconHome
-            // 
-            this.pictureBox_IconHome.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_IconHome.Image")));
-            this.pictureBox_IconHome.Location = new System.Drawing.Point(24, 6);
-            this.pictureBox_IconHome.Name = "pictureBox_IconHome";
-            this.pictureBox_IconHome.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox_IconHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_IconHome.TabIndex = 4;
-            this.pictureBox_IconHome.TabStop = false;
-            // 
-            // buttonHome
-            // 
-            this.buttonHome.FlatAppearance.BorderSize = 0;
-            this.buttonHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
-            this.buttonHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
-            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHome.Image = ((System.Drawing.Image)(resources.GetObject("buttonHome.Image")));
-            this.buttonHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHome.Location = new System.Drawing.Point(0, 203);
-            this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Size = new System.Drawing.Size(197, 51);
-            this.buttonHome.TabIndex = 0;
-            this.buttonHome.Text = "Home";
-            this.buttonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonHome.UseVisualStyleBackColor = true;
-            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
-            // 
-            // buttonListas
-            // 
-            this.buttonListas.FlatAppearance.BorderSize = 0;
-            this.buttonListas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
-            this.buttonListas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonListas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonListas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonListas.Image = ((System.Drawing.Image)(resources.GetObject("buttonListas.Image")));
-            this.buttonListas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonListas.Location = new System.Drawing.Point(0, 352);
-            this.buttonListas.Name = "buttonListas";
-            this.buttonListas.Size = new System.Drawing.Size(197, 51);
-            this.buttonListas.TabIndex = 2;
-            this.buttonListas.Text = "Listas";
-            this.buttonListas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonListas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonListas.UseVisualStyleBackColor = true;
-            this.buttonListas.Click += new System.EventHandler(this.buttonListas_Click);
-            // 
-            // buttonCadastrar
-            // 
-            this.buttonCadastrar.FlatAppearance.BorderSize = 0;
-            this.buttonCadastrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
-            this.buttonCadastrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("buttonCadastrar.Image")));
-            this.buttonCadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCadastrar.Location = new System.Drawing.Point(0, 276);
-            this.buttonCadastrar.Name = "buttonCadastrar";
-            this.buttonCadastrar.Size = new System.Drawing.Size(197, 51);
-            this.buttonCadastrar.TabIndex = 1;
-            this.buttonCadastrar.Text = "Cadastrar";
-            this.buttonCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonCadastrar.UseVisualStyleBackColor = true;
-            this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
-            // 
-            // panelPrincipal
-            // 
-            this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPrincipal.Location = new System.Drawing.Point(197, 18);
-            this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(811, 583);
-            this.panelPrincipal.TabIndex = 2;
-            // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,13 +216,13 @@
         private System.Windows.Forms.Panel panelBotoes;
         private System.Windows.Forms.ToolTip toolTipBarraSuperior;
         private System.Windows.Forms.Button buttonSair;
-        private System.Windows.Forms.Button buttonListas;
-        private System.Windows.Forms.Button buttonCadastrar;
-        private System.Windows.Forms.Button buttonHome;
+        private System.Windows.Forms.Button button_Listas;
+        private System.Windows.Forms.Button button_Cadastrar;
+        private System.Windows.Forms.Button button_Home;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel panelPrincipal;
         private System.Windows.Forms.PictureBox pictureBox_IconHome;
-        private System.Windows.Forms.Button buttonBancoDados;
+        private System.Windows.Forms.Button button_BancoDados;
         private System.Windows.Forms.Button buttonMinimizar;
     }
 }

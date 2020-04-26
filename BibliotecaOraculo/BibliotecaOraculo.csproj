@@ -39,6 +39,15 @@
     <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.19\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
@@ -75,6 +84,7 @@
     <Compile Include="DAL\MySql\ConexaoMySql.cs" />
     <Compile Include="DAL\SqlServer\ConexaoSqlServer.cs" />
     <Compile Include="Entidades\ConexaoAbstract.cs" />
+    <Compile Include="Enums\BancosEnum.cs" />
     <Compile Include="Model\Genero.cs" />
     <Compile Include="View\FormCadastroGenero.cs">
       <SubType>Form</SubType>
@@ -103,6 +113,12 @@
     <Compile Include="View\UserControlListaGeneros.Designer.cs">
       <DependentUpon>UserControlListaGeneros.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UserControlListas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControlListas.Designer.cs">
+      <DependentUpon>UserControlListas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\FormCadastroGenero.resx">
       <DependentUpon>FormCadastroGenero.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,9 +136,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="View\UserControlListaGeneros.resx">
       <DependentUpon>UserControlListaGeneros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControlListas.resx">
+      <DependentUpon>UserControlListas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -138,6 +158,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\voltar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\voltar64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClubeDaLuta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\breaking_bad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fma.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

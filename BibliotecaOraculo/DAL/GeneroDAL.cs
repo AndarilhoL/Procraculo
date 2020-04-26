@@ -65,5 +65,14 @@ namespace BibliotecaOraculo.DAL
 
             return listaGenero;
         }
+
+        public void Alterar(Genero genero)
+        {
+            conexaoSql.command.CommandText =    $"UPDATE Genero (Nome) values(@nome)" +
+                                                $"WHERE ID_Genero = (@idGenero)";
+            conexaoSql.command.Parameters.AddWithValue("@nome", genero.Descricao);
+            conexaoSql.AbrirConexao();
+            conexaoSql.command.ExecuteNonQuery();
+        }
     }
 }

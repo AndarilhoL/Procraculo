@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace BibliotecaOraculo.View
 {
-    public partial class UserControlListaGeneros : UserControl
+    public partial class UserControlListas : UserControl
     {
-        public UserControlListaGeneros()
+        public UserControlListas()
         {
             InitializeComponent();
         }
 
-        private void button_Sair_Click(object sender, EventArgs e)
+        private void button_Voltar_Click(object sender, EventArgs e)
         {
             this.Parent.Controls.Remove(this);
         }
