@@ -28,33 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.card_Generos = new MetroFramework.Controls.MetroTile();
-            this.card_Geral = new MetroFramework.Controls.MetroTile();
             this.button_Voltar = new System.Windows.Forms.Button();
+            this.card_Generos = new MetroFramework.Controls.MetroTile();
             this.card_Seriados = new MetroFramework.Controls.MetroTile();
             this.card_Animes = new MetroFramework.Controls.MetroTile();
             this.card_Filmes = new MetroFramework.Controls.MetroTile();
+            this.card_Geral = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
-            // 
-            // card_Generos
-            // 
-            this.card_Generos.ActiveControl = null;
-            this.card_Generos.Location = new System.Drawing.Point(17, 471);
-            this.card_Generos.Name = "card_Generos";
-            this.card_Generos.Size = new System.Drawing.Size(196, 95);
-            this.card_Generos.TabIndex = 4;
-            this.card_Generos.Text = "Generos";
-            this.card_Generos.UseSelectable = true;
-            // 
-            // card_Geral
-            // 
-            this.card_Geral.ActiveControl = null;
-            this.card_Geral.Location = new System.Drawing.Point(17, 16);
-            this.card_Geral.Name = "card_Geral";
-            this.card_Geral.Size = new System.Drawing.Size(196, 121);
-            this.card_Geral.TabIndex = 0;
-            this.card_Geral.Text = "Geral";
-            this.card_Geral.UseSelectable = true;
             // 
             // button_Voltar
             // 
@@ -67,6 +47,20 @@
             this.button_Voltar.TabIndex = 5;
             this.button_Voltar.UseVisualStyleBackColor = true;
             this.button_Voltar.Click += new System.EventHandler(this.button_Voltar_Click);
+            // 
+            // card_Generos
+            // 
+            this.card_Generos.ActiveControl = null;
+            this.card_Generos.Location = new System.Drawing.Point(17, 507);
+            this.card_Generos.Name = "card_Generos";
+            this.card_Generos.Size = new System.Drawing.Size(196, 59);
+            this.card_Generos.TabIndex = 4;
+            this.card_Generos.Text = "Generos";
+            this.card_Generos.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.card_Generos.UseSelectable = true;
+            this.card_Generos.UseStyleColors = true;
+            this.card_Generos.UseTileImage = true;
+            this.card_Generos.Click += new System.EventHandler(this.card_Generos_Click);
             // 
             // card_Seriados
             // 
@@ -107,10 +101,24 @@
             this.card_Filmes.UseSelectable = true;
             this.card_Filmes.UseTileImage = true;
             // 
+            // card_Geral
+            // 
+            this.card_Geral.ActiveControl = null;
+            this.card_Geral.Location = new System.Drawing.Point(17, 16);
+            this.card_Geral.Name = "card_Geral";
+            this.card_Geral.Size = new System.Drawing.Size(196, 121);
+            this.card_Geral.TabIndex = 0;
+            this.card_Geral.Text = "Geral";
+            this.card_Geral.TileImage = global::BibliotecaOraculo.Properties.Resources.video80x80;
+            this.card_Geral.TileImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.card_Geral.UseSelectable = true;
+            this.card_Geral.UseTileImage = true;
+            // 
             // UserControlListas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.Controls.Add(this.button_Voltar);
             this.Controls.Add(this.card_Generos);
             this.Controls.Add(this.card_Seriados);

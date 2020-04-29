@@ -37,7 +37,8 @@ namespace BibliotecaOraculo.DAL
             List<Genero> generos = new List<Genero>();
             foreach (DataRow item in dataSet.Tables[0].Rows)
             {
-                Genero genero = new Genero(descricao: item.Field<string>("Nome"), idGenero: item.Field<long>("ID_Genero"));
+                Genero genero = new Genero( descricao: item.Field<string>("Nome"), 
+                                            idGenero: item.Field<long>("ID_Genero"));
                 generos.Add(genero);
             }
 
@@ -66,11 +67,13 @@ namespace BibliotecaOraculo.DAL
             return listaGenero;
         }
 
-        public void Alterar(Genero genero)
+        public void Alterar(Genero genero, string descricao)
         {
-            conexaoSql.command.CommandText =    $"UPDATE Genero (Nome) values(@nome)" +
+            conexaoSql.command.CommandText =    $"UPDATE Genero " +
+                                                $"SET Nome = (@nome)" +
                                                 $"WHERE ID_Genero = (@idGenero)";
-            conexaoSql.command.Parameters.AddWithValue("@nome", genero.Descricao);
+            conexaoSql.command.Parameters.AddWithValue("@nome", descricao);
+            conexaoSql.command.Parameters.AddWithValue("@idGenero", genero.IdGenero);
             conexaoSql.AbrirConexao();
             conexaoSql.command.ExecuteNonQuery();
         }

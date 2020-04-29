@@ -11,7 +11,6 @@ namespace BibliotecaOraculo
         public static FormConexao formConexao = new FormConexao();
         public static FormCadastroGenero formCadastroGenero = new FormCadastroGenero();
         public UserControlListas userControlListas = new UserControlListas();
-        public UserControlListaGeneros userControlListaGeneros = new UserControlListaGeneros();
 
         bool mouseDown;
         private Point offset;
@@ -21,6 +20,7 @@ namespace BibliotecaOraculo
             InitializeComponent();
 
             toolTipBarraSuperior.SetToolTip(panelSuperior, "Clique e arraste para mover a tela");
+            RecolherSubMenu();
         }
 
 
@@ -35,9 +35,9 @@ namespace BibliotecaOraculo
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void buttonHome_Click(object sender, EventArgs e)
+        private void button_Home_Click(object sender, EventArgs e)
         {
-            button_Home.BackColor = Color.FromArgb(99, 110, 114);
+            RecolherSubMenu();
         }
 
         private void buttonBancoDados_Click(object sender, EventArgs e)
@@ -45,20 +45,20 @@ namespace BibliotecaOraculo
             formConexao.Show();
         }
 
-        private void buttonCadastrar_Click(object sender, EventArgs e)
+        private void button_Cadastrar_Click(object sender, EventArgs e)
         {
-            formCadastroGenero.Show();
+            MostrarSubMenu();
         }
 
-        private void buttonListas_Click(object sender, EventArgs e)
+        private void button_CadastrarGeneros_Click(object sender, EventArgs e)
         {
+            formCadastroGenero.ShowDialog();
+        }
+
+        private void button_Listass_Click(object sender, EventArgs e)
+        {
+            RecolherSubMenu();
             panelPrincipal.Controls.Add(userControlListas);
-
-
-            //panelPrincipal.Controls.Add(userControlListaGeneros);
-            //GeneroDAL generoDAL = new GeneroDAL();
-            //var lista = generoDAL.BuscarReader();
-            //userControlListaGeneros.dataGridViewGeneros.DataSource = lista;
         }
 
 
@@ -80,6 +80,19 @@ namespace BibliotecaOraculo
         private void panelSuperior_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
+        }
+
+        private void RecolherSubMenu()
+        {
+            panel_BotoesCad.Visible = false;
+        }
+
+        private void MostrarSubMenu()
+        {
+            if (panel_BotoesCad.Visible == false)
+            {
+                panel_BotoesCad.Visible = true;
+            }
         }
     }
 }

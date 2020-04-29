@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BibliotecaOraculo.DAL;
+using System;
 using System.Windows.Forms;
 
 namespace BibliotecaOraculo.View
 {
     public partial class UserControlListas : UserControl
     {
+
         public UserControlListas()
         {
             InitializeComponent();
@@ -20,6 +15,12 @@ namespace BibliotecaOraculo.View
         private void button_Voltar_Click(object sender, EventArgs e)
         {
             this.Parent.Controls.Remove(this);
+        }
+
+        private void card_Generos_Click(object sender, EventArgs e)
+        {
+            Form_ListaGeneros formListaGeneros = new Form_ListaGeneros();
+            formListaGeneros.Show();
         }
     }
 }
