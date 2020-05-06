@@ -1,5 +1,6 @@
 ﻿using BibliotecaOraculo.DAL;
 using BibliotecaOraculo.Model;
+using BibliotecaOraculo.View.Custom;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -8,23 +9,65 @@ namespace BibliotecaOraculo.View
 {
     public partial class Form_ListaGeneros : Form
     {
+        private Genero genero;
         private Genero generoSelecionado;
         private GeneroDAL generoDAL = new GeneroDAL();
         bool mouseDown;
         private Point offset;
 
-        public Form_ListaGeneros()
+        public Form_ListaGeneros(bool cadastrar = false)
         {
-            InitializeComponent();         
-        }
+            InitializeComponent();
 
-        private void Form_ListaGeneros_Load(object sender, EventArgs e)
-        {
-            button_Alterar.BackColor = ColorTranslator.FromHtml("#bdc3c7");
             var lista = generoDAL.BuscarReader();
 
             textBox_Generos.Enabled = false;
             dataGridView_Generos.DataSource = lista;
+            button_Alterar.BackColor = ColorTranslator.FromHtml("#bdc3c7");
+
+            if (cadastrar is true)
+            {         
+                dataGridView_Generos.Enabled = false;
+                textBox_Generos.Enabled = true;
+            }
+        }
+
+        private void button_Salvar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!(string.IsNullOrEmpty(textBox_Generos.Text)))
+                {
+                    genero = new Genero(textBox_Generos.Text);
+                    generoDAL.Salvar(genero);
+                }
+                else
+                {
+                    MessageBox.Show("Campo Vazio");
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+        }
+
+        private void button_Alterar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                generoDAL.Alterar(generoSelecionado, textBox_Generos.Text);
+                ExtendMessageBox.MensagemSucesso();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.ToString());
+            }
+            finally
+            {
+                dataGridView_Generos.Refresh();
+                textBox_Generos.Clear();
+            }
         }
 
         private void button_Sair_Click(object sender, System.EventArgs e)
@@ -57,31 +100,6 @@ namespace BibliotecaOraculo.View
             button_Salvar.BackColor = ColorTranslator.FromHtml("#bdc3c7");
             button_Alterar.BackColor = ColorTranslator.FromHtml("#fdcb6e");
         }
-
-        private void button_Alterar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                generoDAL.Alterar(generoSelecionado, textBox_Generos.Text);
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show(error.ToString());
-            }
-            finally
-            {
-                dataGridView_Generos.Refresh();
-                textBox_Generos.Clear();
-            }
-        }
-
-
-
-
-
-
-
-
 
 
 

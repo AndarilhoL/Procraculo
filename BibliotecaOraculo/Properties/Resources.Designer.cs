@@ -63,6 +63,16 @@ namespace BibliotecaOraculo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1818_success_animation {
+            get {
+                object obj = ResourceManager.GetObject("1818-success-animation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap breaking_bad {
             get {
                 object obj = ResourceManager.GetObject("breaking_bad", resourceCulture);

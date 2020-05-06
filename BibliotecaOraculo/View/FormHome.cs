@@ -52,7 +52,9 @@ namespace BibliotecaOraculo
 
         private void button_CadastrarGeneros_Click(object sender, EventArgs e)
         {
-            formCadastroGenero.ShowDialog();
+            bool cadatrar = true;
+            Form_ListaGeneros formListaGeneros = new Form_ListaGeneros(cadatrar);
+            formListaGeneros.Show();
         }
 
         private void button_Listass_Click(object sender, EventArgs e)
@@ -62,7 +64,7 @@ namespace BibliotecaOraculo
         }
 
 
-        //Eventos Para Movimentar a Tela
+        //INICIO - Eventos Para Movimentar a Tela
         private void panelSuperior_MouseDown(object sender, MouseEventArgs e)
         {
             offset.X = e.X;
@@ -94,5 +96,6 @@ namespace BibliotecaOraculo
                 panel_BotoesCad.Visible = true;
             }
         }
+        //FIM - Eventos Para Movimentar a Tela
     }
 }

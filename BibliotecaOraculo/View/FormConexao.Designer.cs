@@ -75,14 +75,12 @@
             // comboBoxBancos
             // 
             this.comboBoxBancos.FormattingEnabled = true;
-            this.comboBoxBancos.Items.AddRange(new object[] {
-            "MySQL",
-            "SQL Server"});
             this.comboBoxBancos.Location = new System.Drawing.Point(12, 46);
             this.comboBoxBancos.Name = "comboBoxBancos";
             this.comboBoxBancos.Size = new System.Drawing.Size(157, 21);
             this.comboBoxBancos.TabIndex = 7;
             this.comboBoxBancos.TextChanged += new System.EventHandler(this.comboBoxBancos_TextChanged);
+            this.comboBoxBancos.Click += new System.EventHandler(this.comboBoxBancos_Click);
             // 
             // textBoxStringConexao
             // 
@@ -169,6 +167,7 @@
             this.btn_Sair.TabIndex = 17;
             this.btn_Sair.Text = "Sair";
             this.btn_Sair.UseVisualStyleBackColor = false;
+            this.btn_Sair.Click += new System.EventHandler(this.btn_Sair_Click);
             // 
             // FormConexao
             // 

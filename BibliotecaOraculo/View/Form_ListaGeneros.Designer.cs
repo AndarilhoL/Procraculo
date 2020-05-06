@@ -88,7 +88,7 @@
             this.button_Sair.Location = new System.Drawing.Point(666, 30);
             this.button_Sair.Name = "button_Sair";
             this.button_Sair.Size = new System.Drawing.Size(150, 32);
-            this.button_Sair.TabIndex = 13;
+            this.button_Sair.TabIndex = 4;
             this.button_Sair.Text = "Sair";
             this.button_Sair.UseVisualStyleBackColor = false;
             this.button_Sair.Click += new System.EventHandler(this.button_Sair_Click);
@@ -103,9 +103,10 @@
             this.button_Salvar.Location = new System.Drawing.Point(5, 13);
             this.button_Salvar.Name = "button_Salvar";
             this.button_Salvar.Size = new System.Drawing.Size(158, 52);
-            this.button_Salvar.TabIndex = 12;
+            this.button_Salvar.TabIndex = 2;
             this.button_Salvar.Text = "Salvar";
             this.button_Salvar.UseVisualStyleBackColor = false;
+            this.button_Salvar.Click += new System.EventHandler(this.button_Salvar_Click);
             // 
             // button_Alterar
             // 
@@ -118,7 +119,7 @@
             this.button_Alterar.Location = new System.Drawing.Point(169, 13);
             this.button_Alterar.Name = "button_Alterar";
             this.button_Alterar.Size = new System.Drawing.Size(155, 52);
-            this.button_Alterar.TabIndex = 1;
+            this.button_Alterar.TabIndex = 3;
             this.button_Alterar.Text = "Alterar";
             this.button_Alterar.UseVisualStyleBackColor = false;
             this.button_Alterar.Click += new System.EventHandler(this.button_Alterar_Click);
@@ -150,7 +151,7 @@
             this.dataGridView_Generos.Location = new System.Drawing.Point(3, 16);
             this.dataGridView_Generos.Name = "dataGridView_Generos";
             this.dataGridView_Generos.Size = new System.Drawing.Size(615, 292);
-            this.dataGridView_Generos.TabIndex = 0;
+            this.dataGridView_Generos.TabIndex = 5;
             this.dataGridView_Generos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Generos_CellClick);
             this.dataGridView_Generos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Generos_CellDoubleClick);
             // 
@@ -215,7 +216,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_ListaGeneros";
             this.Text = "Form_ListaGeneros";
-            this.Load += new System.EventHandler(this.Form_ListaGeneros_Load);
             this.tableLayoutPanelFormListaGeneros.ResumeLayout(false);
             this.groupBoxBotoes.ResumeLayout(false);
             this.panel_ListaGeneros.ResumeLayout(false);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BibliotecaOraculo.Enums;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -49,6 +50,16 @@ namespace BibliotecaOraculo.View
             {
                 pictureBoxImagem.Visible = true;
             }
+        }
+
+        private void comboBoxBancos_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_Sair_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

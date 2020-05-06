@@ -86,6 +86,13 @@
     <Compile Include="Entidades\ConexaoAbstract.cs" />
     <Compile Include="Enums\BancosEnum.cs" />
     <Compile Include="Model\Genero.cs" />
+    <Compile Include="View\Custom\ExtendMessageBox.cs" />
+    <Compile Include="View\Custom\MessageBox_Custom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Custom\MessageBox_Custom.Designer.cs">
+      <DependentUpon>MessageBox_Custom.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormCadastroGenero.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +126,9 @@
     <Compile Include="View\UserControlListas.Designer.cs">
       <DependentUpon>UserControlListas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Custom\MessageBox_Custom.resx">
+      <DependentUpon>MessageBox_Custom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormCadastroGenero.resx">
       <DependentUpon>FormCadastroGenero.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,7 +211,7 @@
     <None Include="Resources\write_32x32.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="View\Custom\" />
+    <None Include="Resources\1818-success-animation.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
