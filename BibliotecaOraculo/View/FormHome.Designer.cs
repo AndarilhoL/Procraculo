@@ -182,6 +182,7 @@
             this.button_CadastrarAnimes.Text = "Animes";
             this.button_CadastrarAnimes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_CadastrarAnimes.UseVisualStyleBackColor = true;
+            this.button_CadastrarAnimes.Click += new System.EventHandler(this.button_CadastrarAnimes_Click);
             // 
             // button_CadastrarSeriados
             // 
@@ -196,6 +197,7 @@
             this.button_CadastrarSeriados.Text = "Seriados";
             this.button_CadastrarSeriados.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_CadastrarSeriados.UseVisualStyleBackColor = true;
+            this.button_CadastrarSeriados.Click += new System.EventHandler(this.button_CadastrarSeriados_Click);
             // 
             // button_CadastrarFilmes
             // 
@@ -210,6 +212,7 @@
             this.button_CadastrarFilmes.Text = "Filmes";
             this.button_CadastrarFilmes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button_CadastrarFilmes.UseVisualStyleBackColor = true;
+            this.button_CadastrarFilmes.Click += new System.EventHandler(this.button_CadastrarFilmes_Click);
             // 
             // button_Cadastrar
             // 

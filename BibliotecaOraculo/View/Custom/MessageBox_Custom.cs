@@ -10,18 +10,31 @@ namespace BibliotecaOraculo.View.Custom
         bool mouseDown;
         private Point offset;
 
-        public MessageBox_Custom()
-        {
-            InitializeComponent();
-            timerGif.Start();
-        }
-
         //Trabalhar no Construtor para fazer a Extensão do MessageBoxCustomizado
-        public MessageBox_Custom(string corFundo, string descricaoLabel, string mensagem)
+        public MessageBox_Custom(string corFundo, string mensagem, string setarGif, int labelLocalX, int labelLocalY ,int picBoxLocalX, int picBoxLocalY, int largura, int altura, string descricaoLabel = null)
         {
             InitializeComponent();
             timerGif.Start();
-            this.BackColor = ColorTranslator.FromHtml("");
+            this.BackColor = ColorTranslator.FromHtml(corFundo);
+            button_Ok.ForeColor = ColorTranslator.FromHtml(corFundo);
+            pictureBox_Gif.Location = new Point(picBoxLocalX, picBoxLocalY);
+            pictureBox_Gif.Size = new Size(largura, altura);
+            labelMensagem.Text = mensagem;
+            labelMensagem.Location = new Point();
+
+            switch (setarGif)
+            {
+                case "sucesso":
+                    //pictureBox_Gif.Image = Image.FromFile("1818-sucess-animation.gif");
+                    pictureBox_Gif.Image = BibliotecaOraculo.Properties.Resources._1818_success_animation;
+                    break;
+                case "erro":
+                    pictureBox_Gif.Image = BibliotecaOraculo.Properties.Resources.erro;
+                    break;
+                case "alerta":
+                    pictureBox_Gif.Image = BibliotecaOraculo.Properties.Resources.alert;
+                    break;
+            }
         }
 
         private void timerGif_Tick(object sender, EventArgs e)

@@ -216,6 +216,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_ListaGeneros";
             this.Text = "Form_ListaGeneros";
+            this.Load += new System.EventHandler(this.Form_ListaGeneros_Load);
             this.tableLayoutPanelFormListaGeneros.ResumeLayout(false);
             this.groupBoxBotoes.ResumeLayout(false);
             this.panel_ListaGeneros.ResumeLayout(false);

@@ -69,13 +69,22 @@ namespace BibliotecaOraculo.DAL
 
         public void Alterar(Genero genero, string descricao)
         {
-            conexaoSql.command.CommandText =    $"UPDATE Genero " +
+            try
+            {
+                conexaoSql.command.CommandText = $"UPDATE Genero " +
                                                 $"SET Nome = (@nome)" +
                                                 $"WHERE ID_Genero = (@idGenero)";
-            conexaoSql.command.Parameters.AddWithValue("@nome", descricao);
-            conexaoSql.command.Parameters.AddWithValue("@idGenero", genero.IdGenero);
-            conexaoSql.AbrirConexao();
-            conexaoSql.command.ExecuteNonQuery();
+                conexaoSql.command.Parameters.AddWithValue("@nome", descricao);
+                conexaoSql.command.Parameters.AddWithValue("@idGenero", genero.IdGenero);
+                conexaoSql.AbrirConexao();
+                conexaoSql.command.ExecuteNonQuery();
+            }
+            catch (System.Exception erro)
+            {
+
+                
+            }
+            
         }
     }
 }

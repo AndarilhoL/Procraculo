@@ -43,6 +43,7 @@ namespace BibliotecaOraculo.View
                 }
                 else
                 {
+                    ExtendMessageBox.MensagemErro();
                     MessageBox.Show("Campo Vazio");
                 }
             }
@@ -61,6 +62,7 @@ namespace BibliotecaOraculo.View
             }
             catch (Exception error)
             {
+                ExtendMessageBox.MensagemErro();
                 MessageBox.Show(error.ToString());
             }
             finally
@@ -123,6 +125,11 @@ namespace BibliotecaOraculo.View
         private void panel_Superior_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
+        }
+
+        private void Form_ListaGeneros_Load(object sender, EventArgs e)
+        {
+
         }
         // FIM - Eventos Para Movimentar a Tela
     }

@@ -50,12 +50,32 @@ namespace BibliotecaOraculo
             MostrarSubMenu();
         }
 
+        private void button_CadastrarFilmes_Click(object sender, EventArgs e)
+        {
+            Form_ListaObras formListaFilme = new Form_ListaObras();
+            formListaFilme.Show();
+        }
+
+        private void button_CadastrarSeriados_Click(object sender, EventArgs e)
+        {
+            Form_ListaObras formListaSeriados = new Form_ListaObras();
+            formListaSeriados.Show();
+        }
+
+        private void button_CadastrarAnimes_Click(object sender, EventArgs e)
+        {
+            Form_ListaObras formListaAnimes = new Form_ListaObras();
+            formListaAnimes.Show();\
+        }
+
         private void button_CadastrarGeneros_Click(object sender, EventArgs e)
         {
             bool cadatrar = true;
             Form_ListaGeneros formListaGeneros = new Form_ListaGeneros(cadatrar);
             formListaGeneros.Show();
         }
+
+
 
         private void button_Listass_Click(object sender, EventArgs e)
         {
@@ -96,6 +116,7 @@ namespace BibliotecaOraculo
                 panel_BotoesCad.Visible = true;
             }
         }
+
         //FIM - Eventos Para Movimentar a Tela
     }
 }

@@ -114,6 +114,18 @@
     <Compile Include="Model\Filmes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\FormPesquisarImagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPesquisarImagem.Designer.cs">
+      <DependentUpon>FormPesquisarImagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Form_ListaObras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form_ListaObras.Designer.cs">
+      <DependentUpon>Form_ListaObras.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Form_ListaGeneros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +160,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\FormPesquisarImagem.resx">
+      <DependentUpon>FormPesquisarImagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form_ListaObras.resx">
+      <DependentUpon>Form_ListaObras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Form_ListaGeneros.resx">
       <DependentUpon>Form_ListaGeneros.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +230,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1818-success-animation.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19094-alert.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\erro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\google.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
